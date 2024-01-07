@@ -1,4 +1,4 @@
-<h1 align="center"> leleTools </h1>
+<h1 align="center"> leleLinks </h1>
 
 <p align="center">
 Projeto feito com o programa exclusivo e gratuito Discover, promovido pela Rocketseat para ensino de tecnologias WEB. <br/> </br>
@@ -35,9 +35,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O DevLinks é um agregador de links para usar como cartão de visitas online.
 
-No caso do leleTools é o agregador de links sobre mim. 
+No caso do leleLinks é o agregador de links sobre [mim](https://instagram.com/leticia.rudeli)
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
+- [Acesse o projeto finalizado, online](https://lelerudeli.github.io/leleLinks)
 
 - [Assistir aulas](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
 
