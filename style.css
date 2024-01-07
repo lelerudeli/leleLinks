@@ -97,38 +97,18 @@ body {
   left: 0;
   z-index: 1; /*subiu um andar, o botao ficou na frente do track (span)*/
   transform: translateY(-50%);
+
+  animation: slide-back 0.4s;
 } 
 
-#switch button2 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-
-  position: absolute; /*sobreposição de camadas || tem posições na página*/
-  top: 50%;
-  left: 0;
-  z-index: 2; /*subiu um andar, o botao ficou na frente do track (span)*/
-  transform: translateY(-50%);
-}
-
-#switch button2:hover {
-  width: 48px;
-  height: 48px;
-  background: var(--surface-color);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
-  position: absolute;
-  top: 50%;
-  left: -13%;
-  z-index: 0; /*subiu um andar, o botao ficou na frente do track (span)*/
-  transform: translateY(-50%);
-}
-
 .light #switch button {
-  left: initial;
-  right: 0;
+  animation: slide-in 0.5s forwards; /*forwards irá manter o que definimos no TO, do keyframes*/
 }
+
+#switch button:hover{
+  outline:8px solid var(--highlight-color-hover);
+}
+
 
 #switch span {
   display: block; /*span tem um display inline, que não aceita width, entao, mudamos para block*/
@@ -139,16 +119,6 @@ body {
   background: var(--surface-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-}
-
-.light #switch button2 {
-  left: initial;
-  right: 0;
-}
-
-.light #switch button2:hover {
-  left: initial;
-  right: -13%;
 }
 
 /*links -- lista*/
@@ -221,8 +191,9 @@ footer {
   font-size: 14px;
 }
 
-/*media queries*/
+/*at rooles*/
 
+/*media queries*/
 @media(min-width: 700px){
   :root{
     --bg-url: url(./assets/assets/bg-desktop.jpg);
@@ -230,5 +201,25 @@ footer {
 
   .light{
   --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+
+}
+
+@keyframes slide-back{
+  from{
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
