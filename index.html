@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" >
+  <head>
+    <!--config da página-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lelezinha</title>
+    <!--titulo q vai aparecer na aba/pagina do navegador-->
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!--parte visivel da pág-->
+
+    <div id="container">
+      <div id="profile">
+        <img 
+          src="./assets/assets/fotoInsta.png"
+          alt=""
+        />
+        <p>@leticia.rudeli</p>
+      </div>
+      <div id="switch" onclick="toggleMode()"> <!--esse onclick, vai perceber e vai procurar no JS essa função-->
+        <button></button>
+        <button2></button2>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a href="./assets/assets/Currículo Letícia.pdf" target="_blank">
+            veja meu currículo :D
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/lelerudeli" target="_blank">
+            vem ver meu portifólio também!!</a
+          >
+        </li>
+        <li>
+          <a href="https://vsco.co/lelerudeli/gallery" target="_blank">
+            me segue no VSCO</a
+          >
+        </li>
+      </ul>
+      <div id="socialinks">
+        <a href="https://github.com/lelerudeli" target="_blank">
+          <ion-icon name="logo-github"></ion-icon
+        ></a>
+
+        <a href="https://instagram.com/leticia.rudeli" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://twitter.com/lele_rdl" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon
+        ></a>
+
+        <a href="https://linkedin.com/in/lelezinha" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <!--para fazer o rodapé-->
+      <footer>
+        Feito com ♥ pela <a href="https://instagram.com/leticia.rudeli"> Lele</a> :D
+      </footer>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./script.js">
+    </script>
+  </body>
+</html>

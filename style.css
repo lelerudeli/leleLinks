@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*medida do tamanho da caixa será medida através do tamanho da borda*/
+}
+
+:root {
+  /*por padrao, vai ser isso aí*/
+  --text-color: antiquewhite;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0);
+  --highlight-color-hover: rgba(255, 255, 255, 0.05);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+.light {
+  /*mas qnd tiver no modo light, vai ser isso*/
+  --text-color: black;
+  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color-hover: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  /* background-image: url(./assets/assets/bg-mobile.jpg); adiciona uma imagem de fundo || por padrao ela repete
+  background-repeat: no-repeat; parou de repetir mas ficou só posicionada no canto
+  background-position: center; posicionou literalmente o centro da imagem no eixo x
+  background-position: top center; nao vai jogar a imagem pra cima, ela estará alinhada também no eixo y
+  background-size: cover; vai cobrir a tela com a imagem, mas ela muda de acordo com o tamanho do dispositivo */
+
+  /* background: color image repeat position/size   (isso é um atalho) */
+  background: var(--bg-url) top center/cover;
+}
+
+/*container que vai ter tudo dentro*/
+
+#container {
+  width: 360px;
+  /*height: 712px; geralmente no css a gente não precisa de altura, conforme conteudo entra, emburra a caixa pra baixo*/
+  /* margin: auto;  alinhou nosso container ao meio do eixo x || existe uma regra do css que não aplica isso em cima e em baixo, mexe só de acordo com a largura */
+  margin: 56px auto 0px; /*relógio no sentido horário*/
+  padding: 0 24px;
+}
+
+/*profile*/
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  border-radius: 50%;
+  /*display: block -- muda display img, tornando possível alinhar no meio do eixo x
+    margin: auto */
+}
+
+#profile p {
+  /*font-size: 16px; geralmente os navegadores já tem como padrao o tamanho de 16px, então nao precisa colocar, nem altura e largura, pq isso vai ser variável!*/
+
+  font-weight: 500;
+  line-height: 24px; /* 150%  -- determina altura da linha*/
+
+  margin-top: 8px;
+}
+
+/*switch*/
+#switch {
+  position: relative; /*vai relativizar o absolute do botão, fazendo com que o absolute seja apenas dentro do switch */
+  width: 64px;
+
+  margin: 4px auto; /*switch tem display block então conseguimos alinhar ao centro dessa forma, sendo o auto para as laterais*/
+}
+#switch button {
+  height: 32px;
+  width: 32px;
+  padding: 8px 8px;
+  border-radius: 50%;
+  border: 0;
+  background: aliceblue var(--switch-bg-url) no-repeat center;
+
+  position: absolute; /*sobreposição de camadas || tem posições na página*/
+  top: 50%;
+  left: 0;
+  z-index: 1; /*subiu um andar, o botao ficou na frente do track (span)*/
+  transform: translateY(-50%);
+} 
+
+#switch button2 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  position: absolute; /*sobreposição de camadas || tem posições na página*/
+  top: 50%;
+  left: 0;
+  z-index: 2; /*subiu um andar, o botao ficou na frente do track (span)*/
+  transform: translateY(-50%);
+}
+
+#switch button2:hover {
+  width: 48px;
+  height: 48px;
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  position: absolute;
+  top: 50%;
+  left: -13%;
+  z-index: 0; /*subiu um andar, o botao ficou na frente do track (span)*/
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  left: initial;
+  right: 0;
+}
+
+#switch span {
+  display: block; /*span tem um display inline, que não aceita width, entao, mudamos para block*/
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.light #switch button2 {
+  left: initial;
+  right: 0;
+}
+
+.light #switch button2:hover {
+  left: initial;
+  right: -13%;
+}
+
+/*links -- lista*/
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 24px 0; /*cima|baixo  e laterais*/
+}
+
+ul li a {
+  display: flex;
+  justify-content: center; /*alinha no centro do eixo x*/
+  align-items: center; /*alinha no centro do eixo y*/
+
+  padding: 16px 24px;
+
+  border-radius: 8px;
+  border: 1px solid var(--stroke-color); /*grau de transparencia*/
+  background: var(--surface-color); /*grau de transparencia*/
+
+  backdrop-filter: blur(4px); /*embaça o fundinho*/
+  -webkit-backdrop-filter: blur(4px); /*embaça o fundinho*/
+
+  text-decoration: none; /*tira underline do link*/
+  font-weight: 500; /*poderia ser bold pq é acima de 400, mas como estamos importando já o 500, melhor ser específico!*/
+
+  transition: border 0.3s;
+  transition: background 0.3s;
+}
+
+/*pseudo-selector || para quando o mouse estiver em cima do elemento*/
+ul li a:hover {
+  border: 1px solid var(--text-color);
+  background: var(--surface-color-hover); /*grau de transparencia*/
+}
+
+/*social links*/
+
+#socialinks {
+  display: flex; /*deixando os ícones um do lado do outro*/
+  justify-content: center; /*alinhando no centro da caixa*/
+
+  padding: 12px 0px;
+
+  font-size: 24px;
+}
+
+#socialinks a {
+  /*alinhando o ícone e a bolinha no centro de td*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+
+  transition: background 0.2s;
+}
+
+#socialinks a:hover {
+  background: var(--highlight-color-hover);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
