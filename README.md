@@ -51,4 +51,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ by Letícia Rudeli, juntamente com a Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)

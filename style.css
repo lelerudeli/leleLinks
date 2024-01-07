@@ -45,7 +45,8 @@ body {
 /*container que vai ter tudo dentro*/
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*height: 712px; geralmente no css a gente não precisa de altura, conforme conteudo entra, emburra a caixa pra baixo*/
   /* margin: auto;  alinhou nosso container ao meio do eixo x || existe uma regra do css que não aplica isso em cima e em baixo, mexe só de acordo com a largura */
   margin: 56px auto 0px; /*relógio no sentido horário*/
