@@ -1,7 +1,7 @@
 function toggleMode() {
   const html = document.documentElement // document é a representação do nosso doc em formato de objeto, assim conseguimos acessar a nossa tag HTML através do documentELement
 
-  html.classList.toggle("light") //isso faz o if else abaixo, toggle = troca 
+  html.classList.toggle("light") //isso faz o if else abaixo, toggle = troca
 
   /* if (html.classList.contains("light")) {
       //dentro do html, dentro das listas de classe, contém o Light?
